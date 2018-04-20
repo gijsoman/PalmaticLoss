@@ -36,13 +36,12 @@ public class ClickToMove : MonoBehaviour {
         if (Physics.Raycast(ray, out hit, 1000))
         {
             position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
-            Debug.Log(position);
         }
     }
 
     private void MoveToPosition()
     {
-        if (Vector3.Distance(transform.position, position) > 0.6f)
+        if (Vector3.Distance(transform.position, position) > 1f)
         {
             Quaternion newRotation = Quaternion.LookRotation(position - transform.position);
 
@@ -52,11 +51,11 @@ public class ClickToMove : MonoBehaviour {
             transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 10);
             CharacterControl.SimpleMove(transform.forward * Speed);
 
-            CharacterAnimator.SetFloat("Speed", Speed);
+            CharacterAnimator.SetFloat("Forward", Speed);
         }
         else
         {
-            CharacterAnimator.SetFloat("Speed", 0);
+            CharacterAnimator.SetFloat("Forward", 0);
         }
     }
 }
