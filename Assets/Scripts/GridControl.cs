@@ -25,6 +25,7 @@ public class GridControl : MonoBehaviour {
         CreateGrid();
     }
 
+    //returns the grid size by multiplying gridSizeX with gridSizeY;
     public int maxSize
     {
         get

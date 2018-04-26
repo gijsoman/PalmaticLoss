@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+ //Node needs to be a heapitem otherwise we couldnt store it in a heap because we would lack functionality that a heap item needs.
 public class Node : IHeapItem<Node> {
     public bool Walkable;
     public Vector3 WorldPosition;
@@ -36,6 +37,8 @@ public class Node : IHeapItem<Node> {
         }
     }
 
+    //Because we are implementen IHeapItem we need to add its functionality. One is the heapIndex.
+    //We want our nodes to keep track of their own index in the heap.
     public int HeapIndex
     {
         get
@@ -48,13 +51,16 @@ public class Node : IHeapItem<Node> {
         }
     }
 
+    //Compare method that compares the fcosts of items and returns a priority value. 1 is high 0 is same and -1 is low. This is some functionality that IheapItem has.
     public int CompareTo(Node nodeToCompare)
     {
         int compare = fCost.CompareTo(nodeToCompare.fCost);
+        //If the two fcosts are equal we want to start comparing the two hcosts.
         if (compare == 0)
         {
             compare = hCost.CompareTo(nodeToCompare.hCost);
         }
+        //We want to return a higher priority when our fcost is lower so we have to return -compare
         return -compare;
     }
 
