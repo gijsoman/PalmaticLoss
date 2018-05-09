@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Weapon", menuName = "Weapon")]
-public class S_Weapon : ScriptableObject{
+public class S_Weapon : ScriptableObject { 
+    public Texture2D ItemImage;
     public new string name;
 
     public GameObject weapon;

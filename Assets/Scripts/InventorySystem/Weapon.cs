@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Weapon : MonoBehaviour, IWeapon {
+public class Weapon : MonoBehaviour {
 
     [Range(1, 1000)]
     public int damage = 0;
@@ -13,9 +13,17 @@ public class Weapon : MonoBehaviour, IWeapon {
     private string weaponName = "Weapon";
     private int socketAmount = 0;
 
+    Texture2D itemImage;
+
     public void OnPickup()
     {
        
+    }
+
+    Texture2D ItemImage
+    {
+        set { itemImage = value; }
+        get { return itemImage; }
     }
 
     public int Damage

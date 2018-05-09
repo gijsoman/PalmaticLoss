@@ -2006,7 +2006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20be82e4428bc154da099ad0a8018852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayGridGizmos: 0
+  displayGridGizmos: 1
   UnwalkableMask:
     serializedVersion: 2
     m_Bits: 256
@@ -3406,6 +3406,10 @@ MonoBehaviour:
     y: 0
     width: 321
     height: 434
+  firstSlotX: 0
+  firstSlotY: 0
+  slotWidth: 0
+  slotHeight: 0
 --- !u!1 &2116264389
 GameObject:
   m_ObjectHideFlags: 0

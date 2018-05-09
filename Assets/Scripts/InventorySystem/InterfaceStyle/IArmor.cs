@@ -1,4 +1,4 @@
-﻿public interface IArmor : IInventoryItem, IPickupable
+﻿public interface IArmor : IInventoryItem
 {
     int ArmorRate { get; }
     int SocketAmount { get; }
