@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f969fb18bc25f54c8fe0413c7580d95, type: 3}
+  m_Name: Hellsword
+  m_EditorClassIdentifier: 
+  name: Hellsword
+  weapon: {fileID: 100000, guid: 335b72359e4abfe4abe08982595c71eb, type: 2}
+  rarity: Rare
+  weaponType: Sword
+  damage: 1000
+  socketAmount: 2
+  minimumLevelRequired: 0
+  maxDurability: 0
+  currentDurability: 0
